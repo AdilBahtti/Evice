@@ -2,7 +2,7 @@
 
 import BookingCard from '../ClientComponents/DashBoardComponents/BookingCard';
 import Card from '../ExpertSideComponents/DashBoardComponent/Card';
-import style from './Clientdash.module.css'
+import style from './ClientDash.module.css'
 const ClientDash=()=>{
   return <>
   <div className={style.container}>
