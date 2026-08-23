@@ -1,0 +1,59 @@
+.container{
+  width: 98%;
+  margin: auto;
+   border: 1px solid #7F3AED;
+   
+height: 169px;
+
+border-radius: 7px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+.call{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+
+}
+.amount{
+
+  font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 36px;
+color: #7F3AED;
+
+}
+.member{
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 12px;
+
+
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    height: 140px;
+  }
+  .amount{
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px){
+  .container{
+    height: 120px;
+  }
+  .amount{
+    font-size: 26px;
+  }
+  .call{
+    font-size: 15px;
+  }
+}

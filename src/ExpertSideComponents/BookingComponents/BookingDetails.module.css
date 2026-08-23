@@ -1,0 +1,214 @@
+.card {
+  background: white;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+.avatar img{
+  width: 50px;
+  height: 50px;
+}
+
+.info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.name {
+
+
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+;
+
+}
+
+.email {
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+color: #666666;
+
+}
+
+.more {
+  font-size: 22px;
+  color: #888;
+  font-weight: bold;
+}
+
+.dateTime {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #333;
+}
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.question {
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+
+}
+
+.description {
+font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+color: #666666;
+
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e6e6e6;
+  margin: 8px 0;
+}
+
+.callButton {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #7b3ff3;
+  color: white;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.callButton:hover {
+  background: #6a32d9;
+}
+.pendingActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 200px;
+}
+
+
+.approve , .decline{
+  color: white;
+  padding: 10px 80px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.approve {
+  background: #7b3ff3;
+
+}
+
+.decline {
+  background: #FFFFFF;
+  color: #333;
+    border: 1px solid #333;
+}
+
+.completedDetails {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.sessionInfo div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.priceInfo {
+  margin: 10px 0;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #7b3ff3;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.refundButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #7b3ff3;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1200px){
+  .approve , .decline{
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 900px){
+  /* these big top margins pushed the CTA to the bottom of a tall desktop column */
+  .callButton,
+  .pendingActions{
+    margin-top: 30px;
+  }
+  .name{
+    font-size: 18px;
+  }
+  .dateTime{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .pendingActions{
+    flex-wrap: wrap;
+  }
+  .approve , .decline{
+    flex: 1;
+    padding: 12px 20px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.avatar img{
+  object-fit: cover;
+}

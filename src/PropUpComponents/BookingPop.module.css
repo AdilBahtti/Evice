@@ -1,0 +1,115 @@
+.container{
+  width: 23%;
+  height: max-content;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+ padding: 15px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   padding: 40px 0px;
+
+}
+
+.cross{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.pic{
+  width: 60px;
+  margin-top: 30px;
+}
+.head{
+  margin-top: 20px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 113.99999999999999%;
+letter-spacing: 0%;
+ color: #212121;
+}
+.subhead{
+  margin-top: 10px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;;
+line-height: 142%;
+letter-spacing: 0%;
+text-align: center;
+color: #969696;
+
+}
+.btn1 , .btn2{
+  margin-top: 10px;
+  width: 80%;
+  padding: 15px 0px;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 142%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.btn1{
+  color: #FFFFFF;
+  background-color: #7F3AED;
+}
+
+.btn2{
+  background-color: #F5F5F5;
+  color: #212121;
+}
+/* ================= Responsive ================= */
+.container{
+  max-width: calc(100vw - 32px);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 1200px){
+  .container{
+    width: 32%;
+  }
+}
+@media (max-width: 900px){
+  .container{
+    width: 45%;
+  }
+}
+@media (max-width: 600px){
+  .container{
+    width: calc(100vw - 32px);
+    padding: 30px 16px;
+    border-radius: 16px;
+  }
+  .head{
+    font-size: 18px;
+  }
+  .subhead{
+    font-size: 15px;
+  }
+  .btn1 , .btn2{
+    width: 100%;
+  }
+}
+
+/* The dim overlay behind these is position:fixed — match it so the panel stays
+   centred in the viewport instead of drifting off-screen on a scrolled page. */
+.container{
+  position: fixed;
+}

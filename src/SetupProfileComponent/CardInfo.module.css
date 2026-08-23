@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 20px;
+  
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 24px;
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.inputGroup input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 103%;
+letter-spacing: 0%;
+
+
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cancelBtn {
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 80px;
+padding-bottom: 15px;
+padding-left: 80px;
+ border: none;
+ background-color: #F5F5F5;
+ color: #212121;
+ 
+}
+
+.finishBtn {
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 80px;
+padding-bottom: 15px;
+padding-left: 80px;
+ border: none;
+ background-color: #7F3AED;
+ color: #FFFFFF;
+
+
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    margin: 0;
+  }
+}
+@media (max-width: 768px){
+  .row{
+    flex-direction: column;
+    gap: 22px;
+  }
+  .inputGroup input{
+    /* 16px keeps iOS from zooming the page on focus */
+    font-size: 16px;
+  }
+  .actions{
+    flex-direction: column;
+  }
+  .cancelBtn,
+  .finishBtn{
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
+
+/* iOS Safari zooms the whole page when a focused field is under 16px.
+   Applied at the shared mobile breakpoint so landscape phones are covered too. */
+@media (max-width: 900px){
+  .inputGroup input{
+    font-size: 16px;
+  }
+}

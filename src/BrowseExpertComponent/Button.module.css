@@ -1,0 +1,37 @@
+.container{
+  width: 130px;
+height: 60px;
+
+
+border-radius: 8px;
+border-width: 1px;
+ border: 1px solid #999999;
+
+  text-align: center;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+.container select{
+  font-family: Outfit;
+  font-weight: 300;
+  font-style: Light;
+  font-size: 20px;
+   
+  line-height: 156%;
+  letter-spacing: 0%;
+  border: none;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: calc(50% - 10px);
+    min-width: 120px;
+    height: 50px;
+    padding-top: 12px;
+  }
+  .container select{
+    font-size: 16px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,116 @@
+.container{
+  margin: 0px 20px;
+}
+.cont{
+  margin: 20px 20px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 128%;
+letter-spacing: 0%;
+
+}
+.cardContContainer{
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 20px; box-sizing: border-box;
+    
+}
+.cardContainer{
+  border: 1px solid #999999A3;
+  padding: 20px;
+  border-radius: 22px;
+    display: flex;
+      flex-direction: column;
+      gap: 30px;
+}
+.cardInfo{
+    border: 1px solid #999999A3;
+    padding: 20px;
+  border-radius: 22px;
+}
+.cardss{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+
+}
+.book{
+  display: flex;
+  gap: 15px;
+}
+.btn{
+  margin-top: 100px;
+  width: max-content;
+  border: none;
+  border-radius: 7px;
+  padding: 20px 60px;
+  color: #FFFFFF;
+  background-color: #FF8811;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+
+}
+.hiden{
+  overflow: hidden;
+}
+/* ================= Responsive ================= */
+@media (max-width: 1200px){
+  .cardContContainer{
+    grid-template-columns: 3fr 2fr;
+  }
+  .book{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    margin: 0px 16px;
+  }
+  .cont{
+    margin: 16px 0px;
+    font-size: 18px;
+  }
+  .cardContContainer{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cardContainer,
+  .cardInfo{
+    padding: 16px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+  .book{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn{
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px){
+  .container{
+    margin: 0px 12px;
+  }
+  .book > *{
+    flex: 1 1 100%;
+  }
+}

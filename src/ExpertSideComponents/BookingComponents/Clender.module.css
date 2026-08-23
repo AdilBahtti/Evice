@@ -1,0 +1,104 @@
+.container {
+  margin: 0px 20px;
+
+}
+
+.heading {
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 128%;
+letter-spacing: 0%;
+margin-bottom: 15px;
+
+}
+
+.dateRow {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding: 5px 0;
+  
+}
+
+.dateBox {
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  color: #9b9b9b;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+  border-left: 3px solid transparent;
+  
+}
+
+.dateBox:hover {
+  color: #000;
+}
+
+.day {
+  font-family: Manrope;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 12px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.date {
+
+  font-family: Manrope;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.active {
+  color: #000;
+  font-weight: bold;
+  border-left: 3px solid #7b3ff3; /* purple left border */
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .dateRow{
+    gap: 26px;
+  }
+}
+@media (max-width: 900px){
+  .container{
+    margin: 0px;
+  }
+  .heading{
+    font-size: 18px;
+  }
+  .dateRow{
+    gap: 22px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .dateRow::-webkit-scrollbar{
+    display: none;
+  }
+  .dateBox{
+    flex: 0 0 auto;
+    gap: 10px;
+    padding-left: 8px;
+  }
+  .date{
+    font-size: 20px;
+  }
+}

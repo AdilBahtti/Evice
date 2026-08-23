@@ -1,0 +1,179 @@
+.container{
+
+     display: flex;
+     flex-direction: column;
+     gap: 200px;
+  width: 95%;
+  
+
+  margin: auto;
+  margin-top: 160px;
+}
+
+.cont{
+  margin: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.head{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 40px;
+
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.btn1{
+width: 114px;
+height: 47px;
+background-color: #48ACF0;
+color: #ffffff;
+border: #48ACF0;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+border-radius: 6px;
+padding-top: 14px;
+padding-right: 22px;
+padding-bottom: 14px;
+padding-left: 22px;
+
+}
+.btn2{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+
+line-height: 103%;
+letter-spacing: 0%;
+width: 109px;
+height: 47px;
+
+border: none;
+border-radius: 6px;
+padding-top: 14px;
+padding-right: 22px;
+padding-bottom: 14px;
+padding-left: 22px;
+
+
+}
+.btnCont{
+  display: flex;
+  gap: 10px;
+}
+
+
+.optionCont{
+
+  height: max-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+  
+}
+
+
+.foot{
+    margin: auto;
+  height: max-content;
+  text-align: center;
+  
+}
+.Heading{
+  width: 885px;
+height: 132px;
+font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 56px;
+
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+
+   
+
+}
+.pic{
+   margin-top: 10px;
+}
+/* ================= Responsive ================= */
+.Heading{
+  max-width: 100%;
+}
+
+@media (max-width: 1200px){
+  .container{
+    gap: 120px;
+  }
+  .Heading{
+    width: 100%;
+    height: auto;
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1024px){
+  .optionCont{
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .head{
+    font-size: 32px;
+  }
+  .Heading{
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    gap: 70px;
+  }
+  .optionCont{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+  .cont{
+    width: 100%;
+    gap: 24px;
+  }
+  .head{
+    font-size: 26px;
+  }
+  .Heading{
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px){
+  .container{
+    gap: 50px;
+  }
+  .head{
+    font-size: 22px;
+  }
+  .Heading{
+    font-size: 22px;
+  }
+  .btnCont{
+    width: 100%;
+    justify-content: center;
+  }
+}

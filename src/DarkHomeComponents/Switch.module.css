@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  gap: 10px;
+}
+.conatiner img{
+  width: 40%;
+  height: 85%;
+}.container {
+  display: flex;
+  gap: 10px;
+}
+
+.leftBtn {
+  width: 80px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightBtn {
+  width: 80px;
+  height: 40px;
+  background-color: #212121;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px){
+  .leftBtn,
+  .rightBtn{
+    width: 60px;
+    height: 34px;
+  }
+  .container{
+    gap: 8px;
+  }
+}

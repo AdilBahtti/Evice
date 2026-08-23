@@ -1,0 +1,59 @@
+.container{
+  width: 4.7vw;
+  height: 100vh;
+  border-right: 1px solid #9999993B;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  position: relative;
+
+}
+
+.middle{
+  display: flex;
+  flex-direction: column;
+  width: 22px;
+  height: 169px;
+  gap: 28px;
+  position: absolute;
+  top: 70vh;
+  
+}
+.logo{
+  width: 24px;
+  height: 36px;
+  position: absolute;
+  top: 28px;
+}
+
+.fb{
+  width: 10px;
+  height: 21px;
+}
+.insta{
+  width: 17px;
+  height: 17px;
+}
+.twit{
+  width: 19px;
+  height: 16px;
+}
+.utube{
+width: 22px;
+height: 15px;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .container{
+    width: 60px;
+  }
+}
+
+/* On mobile the decorative side strip is dropped — the logo lives in the navbar */
+@media (max-width: 900px){
+  .container{
+    display: none;
+  }
+}

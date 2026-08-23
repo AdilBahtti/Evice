@@ -1,0 +1,111 @@
+.moreAbout {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding-top: 20px;
+  border-top: 1px solid #999999;
+}
+
+.heading {
+
+
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+
+line-height: 29.5px;
+letter-spacing: 0px;
+color: #000000;
+
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.label {
+  color: #000000;
+
+
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 29.5px;
+letter-spacing: 0px;
+
+}
+
+.value {
+
+
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 29.5px;
+letter-spacing: 0px;
+
+}
+
+.flag {
+  width: 18px;
+  height: auto;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  color: #000;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.item1{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skill{
+
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+line-height: 100%;
+letter-spacing: 0%;
+
+border: 1px solid black;
+padding: 4px 18px;
+border-radius: 13px;
+margin: 5px;
+
+
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .item{
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .heading{
+    font-size: 18px;
+  }
+  .label,
+  .value{
+    font-size: 15px;
+    line-height: 24px;
+  }
+}

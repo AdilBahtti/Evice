@@ -1,0 +1,29 @@
+.container{
+  width: 100%;
+  height: 100%;
+   overflow-y: hidden;
+}
+
+.box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  
+}
+.cc{
+  z-index: 1;
+  position: relative;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ================= Responsive ================= */
+.container{
+  min-height: 100%;
+  overflow-x: hidden;
+}

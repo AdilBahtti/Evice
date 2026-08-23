@@ -1,0 +1,78 @@
+.profileContainer{
+  width: 95%;
+  margin: auto;
+  height: max-content;
+  box-sizing: border-box;
+
+}
+.profileBody{
+
+  width: 95%;
+  margin: auto;
+  height: max-content;
+  
+  display: grid;
+  grid-template-columns: 58% 38%;
+  gap: 4%;
+}
+
+
+.navBar{
+  width: 95%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.link{
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+text-align: center;
+
+}
+
+.section{
+  border-top: 1px solid #999999;
+  padding: 20px 25px;
+}
+.active{
+  border: 1px solid black;
+}
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .profileBody{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px){
+  .profileContainer,
+  .profileBody,
+  .navBar{
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .navBar{
+    margin-top: 20px;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .navBar::-webkit-scrollbar{
+    display: none;
+  }
+  .link{
+    padding: 10px 14px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .section{
+    padding: 20px 0px;
+  }
+}

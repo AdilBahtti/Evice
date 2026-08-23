@@ -1,0 +1,63 @@
+.container{
+  padding: 10px 20px;
+  width: 90%;
+  height: max-content;
+  border-bottom: 1px solid #999999;
+  display: flex;
+  align-items: center;
+
+justify-content: space-between;
+
+}
+.pic{
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+.cont{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+.upper{
+ font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+} 
+.time{
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 13px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #999999;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .upper{
+    font-size: 15px;
+    line-height: 130%;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.pic{
+  object-fit: cover;
+}

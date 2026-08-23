@@ -1,0 +1,68 @@
+.welcome img{
+  width: 23px;
+}
+.welcome{
+  margin-top: 10px;
+  font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+color: #151522;
+}
+.subhead{
+  margin-top: 5px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 10px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+color: #999999;
+}
+.google{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+  padding: 8px 0px;
+  margin-top: 18px;
+  background-color: #FFFFFF;
+  border: 1px solid #C3C3C3;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.google img{
+  width: 20px;
+}
+.line{
+  margin-top: 30px;
+  width: 60%;
+  margin-bottom: 30px;
+}
+/* ================= Responsive ================= */
+@media (max-width: 768px){
+  .google,
+  .line{
+    width: 100%;
+    max-width: 420px;
+  }
+}
+@media (max-width: 480px){
+  .welcome{
+    font-size: 21px;
+  }
+  .google{
+    font-size: 15px;
+  }
+}

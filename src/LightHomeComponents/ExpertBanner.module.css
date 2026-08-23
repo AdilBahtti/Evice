@@ -1,0 +1,212 @@
+.container {
+  
+  width: 95%;
+height: 580px;
+
+position: relative;
+
+margin: auto;
+
+
+}
+.container .back{
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 90px;
+}
+.section{
+  width: 860px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  display: flex;
+  flex-direction: column;
+
+
+gap: 33px;
+
+
+color: #212121;
+
+
+}
+.head{
+  font-family: Outfit;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 48px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.text{
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 24px;
+
+line-height: 156%;
+letter-spacing: 0%;
+text-align: center;
+
+
+
+
+
+}
+
+
+.btn{
+  margin: auto;
+ width: 184px;
+height: 50px;
+gap: 10px;
+opacity: 1;
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 32px;
+padding-bottom: 15px;
+padding-left: 32px;
+background: #7F3AED;
+ border: none;
+ outline: none;
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.im{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+   
+  right:  0px;
+}
+.i1{
+  bottom: -20px;
+  left: 300px;
+  height: 60px;
+  width: 60px;
+}
+
+.i2{
+  bottom: 100px;
+  right: 250px;
+  height: 50px;
+  width: 50px;
+}
+.i3{
+  left: -17px;
+  top: 200px;
+  height: 80px;
+  width: 80px;
+}
+.i4{
+  left:150px;
+  top: 70px;
+  width: 50px;
+  height: 50px;
+}
+.i5{
+  right: 150px;
+  top: 200px;
+  width: 70px;
+  height: 70px;
+}
+.i6{
+  right: 200px;
+  top: -45px;
+  width: 85px;
+  height: 85px;
+}
+.i7{
+  right: 90px;
+  bottom: 170px;
+  width: 60px;
+  height: 60px;
+}
+/* ================= Responsive ================= */
+.section{
+  max-width: 90%;
+}
+
+/* The floating avatars are placed at offsets tuned for a ~1400px canvas.
+   Below that the 860px copy block leaves them no clear margin, so they start
+   landing on the headline — drop them rather than let them collide. */
+@media (max-width: 1200px){
+  .im,
+  .i1, .i2, .i3, .i4, .i5, .i6, .i7{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px){
+  .container{
+    height: 460px;
+  }
+  .head{
+    font-size: 36px;
+  }
+  .text{
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    height: 400px;
+  }
+  .container .back{
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    object-fit: cover;
+  }
+  .section{
+    width: 100%;
+    gap: 20px;
+    padding: 0px 18px;
+  }
+  .head{
+    font-size: 26px;
+  }
+  .text{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .container{
+    height: 340px;
+  }
+  .head{
+    font-size: 21px;
+  }
+  .text{
+    font-size: 14px;
+  }
+  .btn{
+    width: 160px;
+    height: 46px;
+    padding: 13px 20px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.im{
+  object-fit: cover;
+}
+.container .back{
+  object-fit: cover;
+}

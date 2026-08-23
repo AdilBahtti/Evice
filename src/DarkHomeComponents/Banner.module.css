@@ -1,0 +1,139 @@
+.container{
+  width: 95%;
+  background-color: #051233;
+  height: 600px;
+  margin: auto;
+  margin-bottom: 200px;
+  position: relative;
+}
+.pic{
+  position: absolute;
+  right: 0%;
+  height: 100%;
+}
+.box{
+  width: 100%;
+  height: 100%;
+  background-color: #051233;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  left: 0;
+}
+.line{
+  position: relative;
+  font-family: DM Serif Display;
+font-weight: 400;
+font-style: Regular;
+font-size: 75px;
+line-height: 111.00000000000001%;
+letter-spacing: 0%;
+ color:#ffffff;
+ z-index: 1;
+ width: 60%;
+ text-align: left;
+ 
+}
+.p{
+  position: relative;
+  z-index: 1;
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 17px;
+line-height: 156%;
+letter-spacing: 0%;
+color: #D9D9D9;
+width: 400px;
+
+}
+.btn{
+  width: 180px;
+height: 50px;
+position: relative;
+z-index: 1;
+border-width: 1px;
+ border-color: #FFFFFF;
+
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 32px;
+padding-bottom: 15px;
+padding-left: 32px;
+color: #FFFFFF;
+background-color: transparent;
+
+}
+
+.cont{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+   margin: 0px 50px;
+   padding-top: 70px;
+  
+}
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .container{
+    height: 500px;
+    margin-bottom: 120px;
+  }
+  .line{
+    font-size: 54px;
+    width: 70%;
+  }
+  .cont{
+    margin: 0px 35px;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    width: 92%;
+    height: auto;
+    min-height: 420px;
+    margin-bottom: 70px;
+  }
+  .pic{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .line{
+    font-size: 34px;
+    width: 100%;
+  }
+  .p{
+    width: 100%;
+    font-size: 16px;
+  }
+  .cont{
+    margin: 0px 20px;
+    padding: 40px 0px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px){
+  .line{
+    font-size: 26px;
+  }
+  .p{
+    font-size: 15px;
+  }
+  .btn{
+    width: 100%;
+    max-width: 220px;
+    padding: 13px 20px;
+    height: 46px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.pic{
+  object-fit: cover;
+}

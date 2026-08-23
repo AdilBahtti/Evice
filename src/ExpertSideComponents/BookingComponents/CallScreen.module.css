@@ -1,0 +1,149 @@
+.container {
+  position: relative; /* Ensure child absolute elements position relative to this */
+}
+
+.container .img {
+  width: 100%;
+  height: 97vh;
+  border-radius: 20px;
+}
+
+.lower {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+bottom: 30px;
+  z-index: 0;
+  left: 50%;
+  transform: translate(-50% , 0%);
+}
+
+.lower img {
+  width: 50px;
+  height: 50px;
+}
+
+.caller{
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.timmer{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 16px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 97vh;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.split {
+  display: flex;
+}
+
+.split .half {
+  width: 50%;
+  height: 100%;
+}
+
+.split .half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Existing styles remain same */
+
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container,
+  .container .img,
+  .img{
+    height: 60vh;
+    height: 60dvh;
+    border-radius: 14px;
+  }
+  .caller{
+    width: 110px;
+    height: 110px;
+    bottom: 90px;
+    left: 16px;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+  .lower{
+    gap: 14px;
+    bottom: 18px;
+  }
+  .lower img{
+    width: 42px;
+    height: 42px;
+  }
+  .timmer{
+    top: 12px;
+    left: 12px;
+    padding: 7px 14px;
+    font-size: 17px;
+  }
+  /* side-by-side halves are unreadable on a phone — stack them */
+  .split{
+    flex-direction: column;
+  }
+  .split .half{
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 480px){
+  .container,
+  .container .img,
+  .img{
+    height: 52vh;
+  }
+  .caller{
+    width: 85px;
+    height: 85px;
+    bottom: 80px;
+  }
+  .lower img{
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.caller{
+  object-fit: cover;
+}
+.lower img{
+  object-fit: contain;
+}

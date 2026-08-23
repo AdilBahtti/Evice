@@ -1,0 +1,205 @@
+.container{
+
+  margin: 0px 20px;
+   margin-bottom: 30px;
+}
+.upper{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.left{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+}
+.right{
+  position: relative;
+   width: 100%;
+  height: 290px ;
+}
+.backg{
+  width: 100%;
+  height: 290px ;
+  border-radius: 13px;
+}
+.cont{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+}
+.l{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.txt{
+font-family: Outfit;
+font-weight: 400;
+font-style: SemiBold;
+font-size: 32px;
+
+color: #FFFFFF;
+
+}
+.btn{
+  width: max-content;
+   background-color: #FFFFFF;
+   padding: 10px 20px;
+   border-radius: 14px;
+   font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+
+}
+.r img{
+  width: 300px;
+}
+.lower{
+  display: grid;
+  grid-template-columns:3fr 1fr;
+  gap: 10px;
+padding: 10px 20px;
+
+}
+.graph img {
+  width: 100%;
+  
+
+}
+.graph{
+  padding: 55px;
+  box-sizing: border-box;
+  border: 1px solid #999999A3;
+  border-radius: 12px;
+   margin-top: 20px;
+  max-height: 347px;
+}
+.cc{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 128%;
+letter-spacing: 0%;
+
+}
+.kk{
+   font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 128%;
+letter-spacing: 0%;
+
+}
+.rec{
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border: 1px solid  #999999A3;
+  border-radius: 12px;
+  height: 325px;
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 1200px){
+  .upper{
+    grid-template-columns: 1fr 1fr;
+  }
+  .lower{
+    grid-template-columns: 2fr 1fr;
+  }
+  .l{
+    width: auto;
+    gap: 30px;
+  }
+  .txt{
+    font-size: 24px;
+  }
+  .r img{
+    width: 180px;
+  }
+  .graph{
+    padding: 25px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    margin: 0px 16px 30px 16px;
+  }
+  .upper,
+  .lower{
+    grid-template-columns: 1fr;
+    padding: 10px 0px;
+    gap: 20px;
+  }
+  .left{
+    gap: 12px;
+  }
+  .right,
+  .backg{
+    height: 230px;
+  }
+  .cont{
+    padding: 16px;
+  }
+  .txt{
+    font-size: 20px;
+  }
+  .r img{
+    width: 130px;
+  }
+  .graph{
+    padding: 15px;
+    max-height: none;
+  }
+  .rec{
+    height: auto;
+    max-height: 325px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 560px){
+  .left{
+    grid-template-columns: 1fr;
+  }
+  .right,
+  .backg{
+    height: 200px;
+  }
+  .txt{
+    font-size: 17px;
+  }
+  /* the illustration has no room left once the copy wraps */
+  .r{
+    display: none;
+  }
+  .cc, .kk{
+    font-size: 18px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.backg{
+  object-fit: cover;
+}

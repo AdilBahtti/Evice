@@ -1,0 +1,158 @@
+.container {
+  width: 300px;
+  height: 450px;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-bottom:30px ;
+  padding-right: 30px;
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-sizing: border-box;
+  /* Drop shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+.level{
+  margin-top: 10px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 28px;
+
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+
+.prize{
+
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 30px;
+ align-items: center;
+color: #7F3AED;
+
+}
+.discount{
+ height: max-content;
+ width: max-content;
+border-radius: 6px;
+  padding: 5px 10px;
+gap: 15px;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+
+
+
+background-color: #6979F821;
+}
+.btn{
+  
+
+  margin-top: 20px;
+    border: none;
+
+   width: 100%;
+ background-color: #7F3AED;
+border-radius: 7px;
+     padding: 8px 0px;
+     text-align: center;
+
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+ color: #ffffff;
+ display: inline-block;        /* keeps text inline */
+  writing-mode: horizontal-tb;  /* default horizontal text */
+  white-space: nowrap;          /* prevents breaking into multiple lines */
+  text-align: center; 
+
+}
+
+
+
+.line{
+  margin-top: 20px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.cont{
+  margin-top: 10px;
+  display: flex;
+   flex-direction: column;
+}
+
+.h{
+
+  margin-bottom: 15px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+
+.l{
+  margin-top: 5px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+   color: #999999;
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+.l img{
+  padding-right: 10px;
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: auto;
+    padding: 30px 24px;
+  }
+  .level{
+    font-size: 24px;
+  }
+  .prize{
+    font-size: 26px;
+  }
+}
+@media (max-width: 480px){
+  .container{
+    padding: 24px 18px;
+  }
+  .level{
+    font-size: 21px;
+  }
+  .prize{
+    font-size: 23px;
+  }
+  .h{
+    font-size: 16px;
+  }
+  .l{
+    font-size: 14px;
+  }
+}

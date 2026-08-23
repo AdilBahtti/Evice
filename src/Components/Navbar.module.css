@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.nav{
+  float: right;
+  width: 94.2vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 25px;
+   color: #212121;
+  font-weight: 400;
+font-family: Outfit;
+
+
+  
+}
+.left{
+  display: flex;
+  gap: 42px;
+  font-family: Outfit;
+font-weight: 400;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.item{
+  text-decoration: none;
+  color: inherit;
+
+}
+.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px; 
+  background-color: currentColor;
+  margin-top: 4px; 
+}
+.right{
+  display: flex;
+  gap: 20px;
+}
+.wrap{
+  width: 300px;
+  height: 30px;
+  background-color: #D9D9D942;
+  border-radius: 40px;
+  gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.wrap input{
+  border: none;
+  outline: none;
+ background-color: transparent;
+   width: 100%;
+   border-radius: 40px;
+   padding: 5px;
+   font-family: Outfit;
+  
+
+   
+}
+.login{
+  text-decoration: none;
+  color: inherit ;
+  border: 1px solid #212121 ;
+  border-radius: 40px ;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  padding-top: 6px;
+}
+.lang{
+  display: flex;
+   gap: 5px;
+   height: 30px;
+    padding-top: 4px;
+   align-items: center;
+}
+.lang img{
+   width: 25px;
+   height: 25px;
+}
+.lang select{
+  border: none;
+  outline: none;
+}
+.dark {
+  background-color: #212121;
+  color: white;
+}
+
+.dark .wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .login {
+  border-color: white;
+  color: white;
+}
+
+.dark .wrap input {
+  color: white;
+}
+
+.dark select {
+  background-color: #212121;
+  color: white;
+}
+
+.dark option {
+  background-color: #212121;
+  color: white;
+}
+
+/* ================= Responsive ================= */
+
+/* Logo + hamburger are desktop-hidden, mobile-only */
+.brand{
+  display: none;
+  width: 22px;
+  height: 33px;
+  cursor: pointer;
+}
+.burger{
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* --- Large laptops --- */
+@media (max-width: 1200px){
+  .left{
+    gap: 24px;
+  }
+  .wrap{
+    width: 200px;
+  }
+}
+
+/* --- Small laptops / tablets --- */
+@media (max-width: 1024px){
+  .nav{
+    padding: 15px;
+  }
+  .left{
+    gap: 16px;
+    font-size: 14px;
+  }
+  .right{
+    gap: 12px;
+  }
+  .wrap{
+    width: 150px;
+  }
+  .login{
+    width: 80px;
+  }
+}
+
+/* --- Mobile: collapse into a drawer --- */
+@media (max-width: 900px){
+  .nav{
+    float: none;
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 1px solid #9999993B;
+  }
+
+  .brand{
+    display: block;
+    order: 1;
+  }
+  .burger{
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  /* Both link groups become the drawer body */
+  .left,
+  .right{
+    order: 3;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .left.open,
+  .right.open{
+    display: flex;
+  }
+
+  .left.open{
+    padding-top: 14px;
+    gap: 2px;
+  }
+  .right.open{
+    padding-bottom: 10px;
+    gap: 14px;
+  }
+
+  .item{
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #9999993B;
+  }
+  /* the underline marker looks wrong in a stacked list */
+  .active::after{
+    display: none;
+  }
+  .active{
+    font-weight: 600;
+  }
+
+  .wrap{
+    width: 100%;
+    height: 40px;
+    margin-top: 12px;
+  }
+  .login{
+    width: 100%;
+    height: 40px;
+    padding-top: 11px;
+  }
+  .lang{
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px){
+  .nav{
+    padding: 10px 12px;
+  }
+  .item{
+    font-size: 15px;
+  }
+}
+
+/* A stacked list needs a clearer active marker than the underline bar */
+@media (max-width: 900px){
+  .item.active{
+    color: #7F3AED;
+    font-weight: 600;
+  }
+  .dark .item.active{
+    color: #B98BFF;
+  }
+}

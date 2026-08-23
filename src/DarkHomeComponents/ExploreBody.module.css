@@ -1,0 +1,40 @@
+.container {
+  width: 98%;
+  margin: 0px 10px;
+  padding: 10px 60px;
+  min-height: 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+
+  /* Hide scrollbar for Webkit (Chrome, Safari) */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* ================= Responsive ================= */
+/* Already a horizontal scroller — just tighten the padding and enable snap */
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 0px 12px;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .container > *{
+    scroll-snap-align: start;
+  }
+}

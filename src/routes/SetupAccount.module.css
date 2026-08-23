@@ -1,0 +1,34 @@
+.layout{
+  display: flex;
+}
+.mainContent{
+   width: 100%;
+   padding: 20px 0px;
+    box-sizing: border-box;
+  
+}
+.contentArea{
+  padding:  10px 30px;
+  box-sizing: border-box;
+
+}
+/* ================= Responsive ================= */
+.mainContent{
+  min-width: 0;
+}
+
+@media (max-width: 900px){
+  .layout{
+    flex-direction: column;
+  }
+  .sidebar{
+    display: none;
+  }
+  .mainContent{
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .contentArea{
+    padding: 10px 16px;
+  }
+}

@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+}
+.content{
+  flex: 1;
+  /* without this a flex child refuses to shrink below its content width */
+  min-width: 0;
+}
+.cont{
+  width: 100%;
+}
+
+@media (max-width: 900px){
+  .container{
+    flex-direction: column;
+  }
+  .side{
+    display: none;
+  }
+  .content{
+    width: 100%;
+  }
+}

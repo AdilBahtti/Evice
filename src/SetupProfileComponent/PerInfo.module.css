@@ -1,0 +1,256 @@
+.formContainer {
+
+  max-width: 1100px;   /* keeps it in page width */
+   
+  font-family: "Outfit", sans-serif;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Profile section */
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.avatar img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #e0e0e0;
+}
+
+.name {
+
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 26px;
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+
+.email {
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;;
+line-height: 100%;
+letter-spacing: 0%;
+
+  color: #999999;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Two-column layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+/* Form fields */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.counter {
+  position: absolute;
+  bottom: -18px;
+  right: 5px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.note {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+}
+
+/* Verify Button inline */
+.inputWithButton {
+  display: flex;
+  gap: 10px;
+}
+
+.verifyBtn {
+  background: #7f3aed;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cancel {
+  background: #F5F5F5;
+  border: 1px solid #ccc;
+  padding: 12px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.proceed {
+  background: #7F3AED;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #99999966;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder,
+.formGroup select {
+  color: #999;
+  font-size: 14px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .grid{
+    width: 100%;
+    gap: 22px;
+  }
+  .formGroup{
+    width: 100%;
+  }
+  .profileSection{
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 768px){
+  .formContainer{
+    width: 100%;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .profileSection{
+    margin-bottom: 30px;
+  }
+  .avatar img{
+    width: 70px;
+    height: 70px;
+  }
+  .name{
+    font-size: 21px;
+  }
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea{
+    /* 16px keeps iOS from zooming the page on focus */
+    font-size: 16px;
+  }
+  .inputWithButton{
+    flex-wrap: wrap;
+  }
+  .actions{
+    flex-direction: column;
+  }
+  .cancel,
+  .proceed{
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.avatar img{
+  object-fit: cover;
+}
+
+/* iOS Safari zooms the whole page when a focused field is under 16px.
+   Applied at the shared mobile breakpoint so landscape phones are covered too. */
+@media (max-width: 900px){
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea,
+  .formGroup input::placeholder,
+  .formGroup textarea::placeholder{
+    font-size: 16px;
+  }
+}

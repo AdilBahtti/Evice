@@ -1,0 +1,314 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 94vw;
+  padding: 0px 25px;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  
+}
+.con{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 13px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.right{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.links a{
+  text-decoration: none;
+  color: #000000;
+  padding-bottom: 10px;
+} 
+.active{
+       border-bottom: 3px solid black;
+}
+.lang{
+  display: flex;
+   gap: 5px;
+   height: 30px;
+    
+   align-items: center;
+}
+.lang img{
+   width: 20px;
+   height: 20px;
+}
+.lang select{
+  border: none;
+  outline: none;
+}
+.prof{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  
+}
+.drop{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #FFFFFF;
+
+  border: 1px solid #999999;
+  bottom: -97px;
+  right: 15px;
+  z-index: 20;
+  border-radius: 10px;
+
+
+}
+.drop a{
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 30px;
+         border-bottom: 1px solid #999999;
+         font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 16px;
+display: flex;
+gap: 20px;
+align-items: center;
+
+
+}
+.notification {
+  position: absolute;
+  background-color: #FFFFFF;
+  
+  color: #000000;
+  top: 25px; /* move it below the icon */
+  right: 130px; /* align it properly */
+  border: 1px solid #999999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 50; /* ensure it's above other elements */
+  width: 400px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  border-bottom: 1px solid #999999;
+}
+.name{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.btn{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+padding: 7px 20px;
+color: #FFFFFF;
+background-color: #7F3AED;
+ border: none;
+ border-radius: 10px;
+}
+
+/* ================= Responsive ================= */
+
+/* Mobile-only header row (logo + hamburger) */
+.mobileBar{
+  display: none;
+}
+.brand{
+  width: 22px;
+  height: 33px;
+  cursor: pointer;
+}
+.burger{
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 0;
+  color: #000000;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Notification panel must never overflow the viewport */
+.notification{
+  max-width: calc(100vw - 24px);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* --- Laptops --- */
+@media (max-width: 1200px){
+  .links{
+    gap: 14px;
+    font-size: 15px;
+  }
+  .right{
+    gap: 12px;
+  }
+  .con{
+    font-size: 12px;
+  }
+}
+
+/* --- Tablets --- */
+@media (max-width: 1024px){
+  .nav{
+    width: 100%;
+    padding: 0px 16px;
+  }
+  .links{
+    gap: 10px;
+    font-size: 14px;
+  }
+  .con{
+    max-width: 90px;
+    font-size: 11px;
+    line-height: 120%;
+  }
+  .notification{
+    right: 0;
+  }
+}
+
+/* --- Mobile: collapse into a drawer --- */
+@media (max-width: 900px){
+  .nav{
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid #9999993B;
+  }
+
+  .mobileBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+  }
+
+  .links,
+  .right{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .links.open,
+  .right.open{
+    display: flex;
+  }
+
+  .links.open{
+    padding-top: 8px;
+  }
+
+  .links a{
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #9999993B;
+  }
+  .active{
+    border-bottom: 1px solid #9999993B;
+    font-weight: 600;
+  }
+
+  .right.open{
+    gap: 16px;
+    padding: 16px 0;
+    align-items: flex-start;
+  }
+  .con{
+    max-width: none;
+    font-size: 14px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  /* Anchor the fly-outs to the drawer instead of the desktop bar */
+  .notification{
+    position: fixed;
+    top: 64px;
+    right: 8px;
+    left: 8px;
+    width: auto;
+  }
+  .drop{
+    position: static;
+    width: 100%;
+    bottom: auto;
+    right: auto;
+  }
+  .drop a{
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px){
+  .nav{
+    padding: 10px 12px;
+  }
+  .links a{
+    font-size: 15px;
+  }
+}
+
+/* A stacked list needs a clearer active marker than a bottom rule */
+@media (max-width: 900px){
+  .links a.active{
+    color: #7F3AED;
+    font-weight: 600;
+    border-bottom: 1px solid #9999993B;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.prof{
+  object-fit: cover;
+}

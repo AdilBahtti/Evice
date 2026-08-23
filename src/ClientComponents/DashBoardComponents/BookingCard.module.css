@@ -1,0 +1,106 @@
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  width: 260px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: 0.2s;
+  flex: 0 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.role {
+  font-size: 14px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f5b400;
+}
+
+.star {
+  color: #f5b400;
+  margin-right: 4px;
+}
+
+.details {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.details p {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  color: #666;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.purple {
+  color: #7b2ff7;
+}
+
+.green {
+  color: #27ae60;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px){
+  .card{
+    width: 240px;
+    padding: 14px;
+  }
+  .name{
+    font-size: 15px;
+  }
+  .role,
+  .details{
+    font-size: 13px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.avatar{
+  object-fit: cover;
+}

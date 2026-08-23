@@ -1,0 +1,25 @@
+.conatiner{
+  margin-top: 30px;
+  width: 60%;
+  text-align: center;
+  background-color: #7F3AED;
+  padding: 15px 0px;
+  border-radius: 7px ;
+    font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+color: #FFFFFF;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+border: none;
+
+}
+/* ================= Responsive ================= */
+@media (max-width: 768px){
+  .conatiner{
+    width: 100%;
+    max-width: 420px;
+  }
+}

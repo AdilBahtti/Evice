@@ -1,0 +1,55 @@
+.aboutSection {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.block {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 12px;
+}
+
+.block:last-child {
+  border-bottom: none;
+}
+
+.title {
+
+
+
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 29.5px;
+letter-spacing: 0px;
+margin-bottom: 15px;
+
+}
+
+.text {
+
+
+
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 29.5px;
+letter-spacing: 0px;
+ color: #000000;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .title{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .text{
+    font-size: 15px;
+    line-height: 26px;
+  }
+}

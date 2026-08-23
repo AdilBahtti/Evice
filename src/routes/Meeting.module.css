@@ -1,0 +1,26 @@
+.layout{
+   background: linear-gradient(to bottom, #374c63, #000000);
+   display: flex;
+}
+.main{
+  width: 94%;
+  height: 97vh;
+  
+  margin: auto;
+}
+/* ================= Responsive ================= */
+.main{
+  min-width: 0;
+}
+
+@media (max-width: 900px){
+  .layout{
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .main{
+    width: 100%;
+    height: auto;
+    padding: 8px;
+  }
+}

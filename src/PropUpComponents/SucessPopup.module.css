@@ -1,0 +1,78 @@
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 2;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 140px 140px; 
+  border-radius: 9px;
+}
+.container img{
+  width: 150px;
+}
+.cont{
+  margin-top: 15px;
+  font-family: Outfit;
+font-weight: 500;
+font-size:20px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.btn{
+
+  margin-top: 15px ;
+  font-family: Outfit;
+font-weight: 500;
+font-size: 18px;
+background-color: #7F3AED;
+line-height: 100%;
+letter-spacing: 0%;
+color: #FFFFFF;
+border: none;
+border-radius: 9px;
+font-family: Outfit;
+font-weight: 400;
+padding: 10px 30px;
+font-size: 16px
+
+
+
+
+}
+/* ================= Responsive ================= */
+.container{
+  max-width: calc(100vw - 32px);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px){
+  .container{
+    padding: 90px;
+  }
+}
+@media (max-width: 600px){
+  .container{
+    width: calc(100vw - 32px);
+    padding: 45px 20px;
+    text-align: center;
+  }
+  .container img{
+    width: 110px;
+  }
+  .cont{
+    font-size: 17px;
+  }
+}
+
+/* The dim overlay behind these is position:fixed — match it so the panel stays
+   centred in the viewport instead of drifting off-screen on a scrolled page. */
+.container{
+  position: fixed;
+}

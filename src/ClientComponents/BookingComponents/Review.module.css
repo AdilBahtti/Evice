@@ -1,0 +1,289 @@
+/* Main container */
+.container {
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.heading {
+font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 30px;
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+
+.subheading {
+ font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 17px;
+margin-top: 10px;
+color: #999999;
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+
+/* Card layout */
+.card {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+  margin-bottom: 100px;
+}
+
+/* Left section */
+.left {
+  flex: 2;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.name {
+ font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.rating {
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+
+
+}
+
+.starIcon {
+  color: gold;
+  font-size: 14px;
+}
+
+.role {
+  font-size: 12px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+
+
+}
+
+.info {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.info h4 {
+  margin: 10px 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.emails span {
+  background: #f0e9ff;
+  color: #5a33d8;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.desc {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Right section */
+.right {
+  flex: 1;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+}
+
+.rightTitle {
+  margin-bottom: 10px;
+}
+
+.cardDetails {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.info div{
+  margin-top: 25px;
+}
+.info h4{
+   font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+
+}
+.info p{
+   font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+.mastercard {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: red;
+  margin-right: 5px;
+}
+
+/* Payment Box */
+.paymentBox {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.paymentBox p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.paymentBox hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px dashed #ddd;
+}
+
+.total {
+  font-weight: bold;
+  color: #7a3df0;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 270px;
+}
+
+.backBtn {
+  flex: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  flex: 1;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  background: #7a3df0;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .card{
+    gap: 20px;
+  }
+  .actions{
+    margin-top: 140px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    padding: 10px 16px;
+  }
+  .heading{
+    font-size: 24px;
+  }
+  .subheading{
+    font-size: 15px;
+  }
+  .card{
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px;
+    margin-bottom: 50px;
+  }
+  /* the divider was a left border on a side column that no longer sits beside anything */
+  .right{
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  /* this margin existed only to push the buttons to the bottom of the tall column */
+  .actions{
+    margin-top: 30px;
+  }
+  .avatar{
+    width: 52px;
+    height: 52px;
+  }
+  .name{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px){
+  .heading{
+    font-size: 21px;
+  }
+  .actions{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .backBtn,
+  .confirmBtn{
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.avatar{
+  object-fit: cover;
+}

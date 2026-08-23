@@ -1,0 +1,179 @@
+.card{
+width: 308px;
+height: 250px;
+background: #FFFFFF;
+box-shadow: 0px 15px 15px 0px #0000001A;
+border: 1px solid #FFFFFF;
+ margin: 25px 0px;
+
+opacity: 1;
+border-radius: 11px;
+
+
+
+}
+.head{
+  display:  grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+  align-items: center ;
+  /* border-bottom: 1px solid #00000026; */
+        
+ 
+}
+
+.head img{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.rate img{
+  width: 15px;
+  height: 15px;
+  /* content-box so the trailing gap does not eat into the icon itself */
+  box-sizing: content-box;
+  padding-right: 5px;
+
+}
+.rate {
+  margin-top: 10px;
+}
+.name{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+
+.rate{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+
+
+
+}
+.rate span {
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+color: #999999;
+
+}
+
+.like {
+  
+  align-items: center;
+}
+.l{
+  height: 1px;
+  width: 80%;
+  background-color: #00000026 ;
+  margin: auto;
+  margin-top: 10px;
+}
+.body{
+  margin-top: 20px;
+  margin-left: 15px;
+
+}
+.place {
+  padding-top: 5px ;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.type{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.btn{
+
+
+  width: 265px;
+  height: 36px;
+ 
+   margin-left: 23px;
+   margin-top: 30px;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-right: 101px;
+  padding-bottom: 10px;
+  padding-left: 101px;
+  border: none;
+  background-color: #34A853;
+  color: #FFFFFF;
+  
+  
+}
+/* ================= Responsive ================= */
+/* Cards live in a horizontal scroller — stop them collapsing */
+.card{
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+/* The CTA used huge horizontal padding to fake its width — size it properly instead */
+.btn{
+  width: calc(100% - 46px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px){
+  .card{
+    width: 265px;
+    height: auto;
+    padding-bottom: 15px;
+  }
+  .head{
+    grid-template-columns: 1fr 2fr auto;
+  }
+  /* direct child only — the star inside .rate keeps its own size */
+  .head > img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  .name{
+    font-size: 15px;
+  }
+  .rate,
+  .place,
+  .type{
+    font-size: 14px;
+  }
+  .body{
+    margin-top: 14px;
+  }
+  .btn{
+    margin-left: 15px;
+    margin-top: 20px;
+    width: calc(100% - 30px);
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.head > img{
+  object-fit: cover;
+}

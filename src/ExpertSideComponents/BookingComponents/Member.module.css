@@ -1,0 +1,135 @@
+.container{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1e2d3c, #000000);
+   border-radius: 15px;
+   
+}
+.head{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+color: #FFFFFF;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    border-bottom: 1px solid #999999;
+}
+.chat {
+  width: 100%;
+  height: 580px;
+  
+  overflow-y: auto;
+
+
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+}
+ .msgCont{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px;
+ }
+ .msgCont img{
+       width: 30px;
+       height: 30px;
+       border-radius: 100%;
+
+ }
+.chat::-webkit-scrollbar {
+  display: none; 
+}
+.input input{
+  background-color: transparent;
+  border: none;
+}
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #999999;
+  margin: 5px;
+}
+.btnCont{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.btn1 , .btn2{
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+padding: 15px 68px;
+
+
+ color: #FFFFFF;
+      border: none;
+      border-radius: 14px;
+}
+.btn1{
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+}
+.btn2{
+  background-color: #7F3AED;
+}
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .chat{
+    height: 470px;
+  }
+}
+
+@media (max-width: 900px){
+  .container{
+    height: auto;
+  }
+  .chat{
+    height: 45vh;
+    min-height: 260px;
+  }
+  .head{
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+  .msgCont{
+    margin: 14px 12px;
+  }
+  .input{
+    margin: 8px;
+  }
+  .input input{
+    width: 100%;
+    /* 16px keeps iOS from zooming the page on focus */
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+
+@media (max-width: 900px){
+  .btnCont{
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0px 10px 12px 10px;
+  }
+  .btn1 , .btn2{
+    flex: 1;
+    padding: 14px 20px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.msgCont img{
+  object-fit: cover;
+}

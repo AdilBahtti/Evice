@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.name{
+  color: #FFFFFF;
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 16px;
+
+
+}
+.container img {
+  width: 25px;
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 92%;
+    gap: 20px;
+  }
+  .name{
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,312 @@
+.container{
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 40px;
+    
+     position: relative;
+}
+.left img {
+  width: 80%;
+}
+.left{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+.left  .vector {
+   position: absolute;
+   top: -15px;
+   right: 190px;
+ width: 33%;
+ height: 12%;
+}
+.line1{
+   width: 400px;
+   height: 1px;
+   background-color: black;
+   position: relative;
+}
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: black;
+   position: absolute;
+   right: 0px;
+   top: -5px;
+}
+.text{
+  width: 70%;
+height: max-content;
+ font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 19px;
+
+line-height: 156%;
+letter-spacing: 0%;
+
+ color: #999999;
+
+
+}
+
+.searchWrap{
+  
+display: flex;
+  background-color: #F5F5F5;
+  width: 60%;
+height: 50px;
+top: 575px;
+left: 133px;
+border-radius: 8px;
+
+opacity: 1;
+
+}
+.search{
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+    gap: 10px;
+  align-items: center;
+}
+.search input{
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #999999;
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 17px;
+
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+.btn{
+  width: 70px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FF8811;
+}
+.btnContainer{
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+.btn1{
+    
+    
+cursor: pointer;
+
+border-radius: 36px;
+border-width: 1px;
+padding: 5px 10px;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+
+line-height: 100%;
+letter-spacing: 0%;
+background-color: white;
+
+
+}
+.grp{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.btn2{
+
+top: 766px;
+left: 133px;
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 32px;
+padding-bottom: 15px;
+padding-left: 32px;
+background-color: #7F3AED;
+color: #FFFFFF;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+cursor: pointer;
+line-height: 100%;
+letter-spacing: 0%;
+
+ border: none;
+
+}
+.btn3{
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+
+text-decoration-thickness: 0%;
+background-color: white;
+border: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+
+}
+.btn3 img {
+  width: 23px;
+  height: 23px;
+}
+
+.btn2Container{
+  display: flex;
+  gap: 20px;
+}
+ .right .heropic{
+  width: 95%;
+height: 600px;
+
+}
+
+
+.end{
+  height: 1px;
+  width: 300px;
+  margin: auto;
+  background-color: #00000026;
+}
+/* ================= Responsive ================= */
+
+@media (max-width: 1200px){
+  .container{
+    height: auto;
+    padding: 30px;
+  }
+  .searchWrap{
+    width: 80%;
+  }
+  .btnContainer{
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  .right .heropic{
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1024px){
+  .container{
+    gap: 30px;
+  }
+  .left{
+    gap: 30px;
+  }
+  .text{
+    width: 90%;
+    font-size: 17px;
+  }
+  .line1{
+    width: 100%;
+    max-width: 400px;
+  }
+  .left .vector{
+    right: 90px;
+  }
+}
+
+/* --- Mobile: stack the hero, artwork last --- */
+@media (max-width: 900px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 24px 16px;
+    gap: 28px;
+  }
+  .left{
+    gap: 24px;
+  }
+  /* direct children only — nested button icons keep their own size */
+  .left > img{
+    width: 100%;
+  }
+  .left .vector{
+    position: static;
+    width: 60%;
+    height: auto;
+    margin-top: -10px;
+  }
+  .line1{
+    width: 60%;
+  }
+  .text{
+    width: 100%;
+    font-size: 16px;
+  }
+  .searchWrap{
+    width: 100%;
+    height: 46px;
+  }
+  .btnContainer{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .btn1{
+    font-size: 14px;
+  }
+  .grp{
+    gap: 20px;
+  }
+  .btn2Container{
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn2{
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  .right .heropic{
+    width: 100%;
+    height: auto;
+  }
+  .end{
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px){
+  .container{
+    padding: 20px 14px;
+  }
+  .text{
+    font-size: 15px;
+    line-height: 150%;
+  }
+  .btn2Container{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn2{
+    width: 100%;
+  }
+  .btn3{
+    justify-content: center;
+  }
+}

@@ -1,0 +1,184 @@
+.card{
+width: 258px;
+height: 275px;
+background: #FFFFFF;
+box-shadow: 0px 15px 15px 0px #0000001A;
+border: 1px solid #FFFFFF;
+ margin: 25px 0px;
+
+opacity: 1;
+border-radius: 11px;
+
+
+
+}
+.head{
+  width: 258px;
+height: 148px;
+position: relative;
+opacity: 1;
+border-radius: 11px;
+
+}
+.head img{
+    width: 258px;
+height: 148px;
+border-radius: 11px;
+}
+.head .profile{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  bottom: -20px;
+  left: 30px;
+}
+.middle{
+  padding: 0px 10px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.name{
+
+font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 15px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.charges{
+
+
+
+font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 15px;
+color: #7F3AED;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.charges span{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+color: #999999;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.category{
+
+  margin: 5px 10px;
+font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 13px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.btn{
+
+  margin: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: #7F3AED;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 13px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.28) 100%);
+  color: #FFFFFF;
+
+  font-family: Outfit;
+  font-weight: 500;
+  font-size: 13px;
+
+  padding: 4px 10px;
+  border-radius: 12px;
+  line-height: 1; 
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: auto;  
+}
+
+.rating img{
+  width: 12px;
+  height: 12px;
+}
+/* ================= Responsive ================= */
+/* Cards live in a horizontal scroller — stop them collapsing */
+.card{
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+/* direct child only: the star inside .rating and the .profile avatar
+   are also descendants of .head and must keep their own sizes */
+.head{
+  width: 100%;
+}
+.head > img{
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px){
+  .card{
+    width: 220px;
+    height: auto;
+    padding-bottom: 10px;
+    margin: 15px 0px;
+  }
+  .head,
+  .head > img{
+    height: 130px;
+  }
+  .middle{
+    margin-top: 26px;
+    gap: 8px;
+  }
+  .name,
+  .charges,
+  .charges span{
+    font-size: 14px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.head .profile{
+  object-fit: cover;
+}

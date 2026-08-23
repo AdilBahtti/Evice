@@ -1,0 +1,90 @@
+.container{
+  width: 97%;
+  height: max-content;
+  margin: 20px auto;
+
+}
+.upper{
+  width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.title{
+  margin-top: 20px;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+
+
+
+}
+.upcoming {
+  display: flex;
+  gap: 20px;
+  width: 90vw;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* allow scrolling */
+  padding: 20px 5px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.upcoming::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.recent {
+  display: flex;
+  gap: 20px;
+  width: 90vw;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* allow scrolling */
+  padding: 20px 5px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.recent::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    margin: 16px 0px;
+    padding: 0px 16px;
+  }
+  .upper{
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  /* these were sized against the viewport; inside the padded page they overflow */
+  .upcoming,
+  .recent{
+    width: 100%;
+    gap: 14px;
+    padding: 16px 0px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .upcoming > *,
+  .recent > *{
+    scroll-snap-align: start;
+  }
+  .title{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 560px){
+  .upper{
+    grid-template-columns: 1fr;
+  }
+}

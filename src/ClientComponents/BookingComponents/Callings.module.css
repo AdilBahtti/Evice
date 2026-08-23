@@ -1,0 +1,137 @@
+.container {
+  background: linear-gradient(to bottom, #374c63, #000000);
+  /* dvh tracks the real visible area once the mobile browser bar hides;
+     vh alone leaves the call controls under the chrome. 100vw would also
+     add the scrollbar width and force a horizontal scroll. */
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 260px;
+}
+.join{
+  background-color: transparent;
+  color: #FFFFFFFF;
+  padding: 20px 100px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 103%;
+letter-spacing: 0%;
+text-align: center;
+margin-top: 20px;
+
+}
+
+.avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.lower img{
+  width: 50px;
+}
+.lower{display: flex;
+     gap: 20px;
+
+}
+.upper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.name{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: 0%;
+ color: #FFFFFFFF;
+}
+.status{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #99999999;
+
+}
+
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px){
+  .cont{
+    gap: 160px;
+  }
+}
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    padding: 30px 16px;
+    box-sizing: border-box;
+  }
+  .cont{
+    width: 100%;
+    gap: 90px;
+  }
+  .avatar{
+    width: 140px;
+    height: 140px;
+  }
+  .name{
+    font-size: 26px;
+  }
+  .status{
+    font-size: 17px;
+  }
+  .lower{
+    gap: 16px;
+  }
+  .lower img{
+    width: 44px;
+  }
+}
+@media (max-width: 480px){
+  .cont{
+    gap: 60px;
+  }
+  .avatar{
+    width: 115px;
+    height: 115px;
+  }
+  .name{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px){
+  .join{
+    width: 100%;
+    padding: 16px 20px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.avatar{
+  object-fit: cover;
+}

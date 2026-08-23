@@ -1,0 +1,421 @@
+.container{
+  height: 85vh;
+  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 40px;
+  padding-bottom: 15px;
+    
+     position: relative;
+     background-color: #212121;
+}
+.left img {
+  width: 80%;
+}
+.left{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+.left  .vector {
+   position: absolute;
+   top: 5px;
+   right: 280px;
+ width: 33%;
+ height: 12%;
+}
+
+
+.text{
+  width: 70%;
+height: max-content;
+ font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 19px;
+
+line-height: 156%;
+letter-spacing: 0%;
+
+ color: #999999;
+
+
+}
+
+.searchWrap{
+  
+display: flex;
+  background-color: #F5F5F5;
+  width: 60%;
+height: 50px;
+top: 575px;
+left: 133px;
+
+
+opacity: 1;
+
+
+
+
+
+border-radius: 81px;
+
+
+}
+.search{
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+    gap: 10px;
+  align-items: center;
+}
+.search input{
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #999999;
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 17px;
+
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+.btn{
+  width: 55px;
+  height: 45px;
+  border: none;
+  margin-top: 3px;
+  margin-right: 7px;
+  
+  background-color: #34A853;
+
+
+
+
+
+opacity: 1;
+border-radius: 46px;
+
+}
+.btnContainer{
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+.btn1{
+    
+    
+cursor: pointer;
+
+border-radius: 36px;
+border-width: 1px;
+padding: 5px 10px;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 15px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+background-color: #212121;
+border: 1px solid #FFFFFF;
+
+
+}
+.grp{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.popular{
+  
+  padding-top: 4px ;
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+color: #FFFFFF;
+line-height: 100%;
+letter-spacing: 0%;
+width: 100px;
+ 
+
+}
+
+
+.btn2{
+
+
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 32px;
+padding-bottom: 15px;
+padding-left: 32px;
+background-color: #48ACF0;
+color: #FFFFFF;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+cursor: pointer;
+line-height: 100%;
+letter-spacing: 0%;
+
+ border: none;
+
+}
+.btn3{
+
+border-width: 1px;
+
+opacity: 1;
+gap: 10px;
+border-radius: 7px;
+padding-top: 15px;
+padding-right: 32px;
+padding-bottom: 15px;
+padding-left: 32px;
+
+background-color: #212121;
+border: 1px solid #FFFFFF;
+color: #FFFFFF;
+}
+
+
+.btn2Container{
+  display: flex;
+  gap: 20px;
+}
+
+
+
+.end{
+  height: 1px;
+  width: 300px;
+  margin: auto;
+  background-color: #00000026;
+}
+
+.more img {
+  width: 15px;
+}
+.more span {
+  text-decoration: underline;
+}
+.more{
+
+  margin-top: 35px;
+  display: flex;
+  gap: 5px;
+  color: #FFFFFF;
+
+
+
+
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
+text-decoration-style: solid;
+
+text-decoration-thickness: 0%;
+
+}
+
+.more div{
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+color: #999999;
+
+text-decoration: none;
+
+
+
+}
+
+.right{
+  position: relative;
+}
+.right .heropic{
+  width: 100%;
+        height: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+
+.i1 , .i3{
+  width:100% ;
+
+}
+.post1 , .post2{
+     
+  position: absolute;
+     width:40% ;
+}
+
+.i2 , .i4{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+
+.post1{
+    position: absolute;
+  top : 130px;
+  left: -50px;
+
+}
+.post2{
+  position: absolute;
+  top: 150px;
+  right: -40px;
+}
+
+
+/* ================= Responsive ================= */
+
+@media (max-width: 1200px){
+  .container{
+    height: auto;
+    padding: 30px;
+  }
+  .searchWrap{
+    width: 80%;
+  }
+  .btnContainer{
+    width: 85%;
+    flex-wrap: wrap;
+  }
+  .post1{
+    left: -20px;
+  }
+  .post2{
+    right: -10px;
+  }
+}
+
+@media (max-width: 1024px){
+  .container{
+    gap: 30px;
+  }
+  .left{
+    gap: 30px;
+  }
+  .text{
+    width: 90%;
+    font-size: 17px;
+  }
+  .left .vector{
+    right: 140px;
+  }
+  .post1, .post2{
+    display: none;
+  }
+  .right .heropic{
+    position: static;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* --- Mobile: stack the hero, artwork last --- */
+@media (max-width: 900px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 24px 16px;
+    gap: 28px;
+  }
+  .left{
+    gap: 24px;
+  }
+  /* direct children only — nested button icons keep their own size */
+  .left > img{
+    width: 100%;
+  }
+  .left .vector{
+    position: static;
+    width: 60%;
+    height: auto;
+    margin-top: -10px;
+  }
+  .text{
+    width: 100%;
+    font-size: 16px;
+  }
+  .searchWrap{
+    width: 100%;
+    height: 46px;
+  }
+  .btn{
+    width: 48px;
+    height: 40px;
+  }
+  .btnContainer{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .popular{
+    width: auto;
+    padding-top: 0;
+  }
+  .btn1{
+    font-size: 13px;
+  }
+  .grp{
+    gap: 20px;
+  }
+  .btn2Container{
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn2, .btn3{
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  .more{
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .right .heropic{
+    width: 100%;
+    height: auto;
+  }
+  .end{
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px){
+  .container{
+    padding: 20px 14px;
+  }
+  .text{
+    font-size: 15px;
+    line-height: 150%;
+  }
+  .btn2Container{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn2, .btn3{
+    width: 100%;
+  }
+}

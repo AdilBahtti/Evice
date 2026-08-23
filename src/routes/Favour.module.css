@@ -1,0 +1,61 @@
+.container{
+  width: 97%;
+  height: max-content;
+  margin: 20px auto;
+ 
+}
+.name{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 30px;
+line-height: 103%;
+letter-spacing: 0%;
+
+}
+.sub{
+  margin-top: 5px;
+  font-family: Outfit;
+font-weight: 300;
+font-style: Light;
+font-size: 18px;
+line-height: 156%;
+letter-spacing: 0%;
+
+}
+.cont{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+/* ================= Responsive ================= */
+@media (max-width: 1200px){
+  .cont{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    margin: 16px 0px;
+    padding: 0px 16px;
+  }
+  .cont{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    justify-items: center;
+  }
+  .name{
+    font-size: 24px;
+  }
+  .sub{
+    font-size: 16px;
+  }
+}
+@media (max-width: 700px){
+  .cont{
+    grid-template-columns: 1fr;
+  }
+  .name{
+    font-size: 21px;
+  }
+}

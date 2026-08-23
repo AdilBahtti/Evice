@@ -1,0 +1,90 @@
+.cont img{
+  width: 50px;
+  height: 50px;
+   border-radius: 100%;
+}
+.container{
+  width: 90%;
+  margin: 17px auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.cont{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.name{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+color: #FFFFFF;
+
+}
+.time{
+ font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+color: #999999;
+
+}
+.btnCont{
+  display: flex;
+  gap: 15px;
+}
+.btn1 , .btn2{
+
+
+border-radius: 6px;
+
+border-width: 1px;
+padding-top: 10px;
+padding-right: 25px;
+padding-bottom: 10px;
+padding-left: 25px;
+font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+ color: #FFFFFF;
+
+}
+.btn1{
+  background-color: transparent;
+}
+.btn2{
+  background-color: #7F3AED;
+}
+.btnCont img{
+  width: 15px;
+  height: 15px;
+
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 92%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .cont img{
+    width: 42px;
+    height: 42px;
+  }
+  .name{
+    font-size: 17px;
+  }
+  .btn1 , .btn2{
+    padding: 9px 16px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.cont img{
+  object-fit: cover;
+}

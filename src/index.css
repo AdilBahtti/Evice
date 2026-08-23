@@ -1,0 +1,62 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, video{
+  max-width: 100%;
+  /* type selector (0,0,1) so any class rule still wins; this only catches
+     images that have no sizing rule at all, keeping their aspect ratio */
+  height: auto;
+}
+
+body{
+  /* long unbroken strings (emails, URLs) must not push the layout sideways */
+  overflow-wrap: break-word;
+}
+
+.content-area{
+  width: 94.2vw;
+  
+  float: right;
+  min-height: 70vh;
+  max-height: max-content;
+}
+.layout-container{
+  display: flex;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px){
+  .content-area{
+    width: 92vw;
+  }
+}
+
+/* ===== Mobile: the vertical side strip is hidden and content takes full width ===== */
+@media (max-width: 900px){
+  .layout-container{
+    flex-direction: column;
+  }
+  .layout-container > .sidebar{
+    display: none;
+  }
+  .main-content{
+    width: 100%;
+  }
+  .content-area{
+    width: 100%;
+    float: none;
+    min-height: auto;
+  }
+}

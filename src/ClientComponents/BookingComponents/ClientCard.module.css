@@ -1,0 +1,84 @@
+.container{
+  width: max-content;
+  height: max-content;
+  padding: 10px 20px;
+  border: 1px solid #999999;
+  border-radius: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+
+}
+.container img{
+  width: 70px ;
+  height: 70px;
+  border-radius: 100%;
+}
+.rating img{
+  width: 15px;
+  height: 15px;
+}
+.name{
+  font-family: Outfit;
+font-weight: 500;
+font-style: Medium;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.prof{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rating{
+  font-family: Outfit;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+
+text-align: center;
+
+}
+/* ================= Responsive ================= */
+@media (max-width: 900px){
+  .container{
+    width: 100%;
+    padding: 10px 16px;
+    gap: 14px;
+    border-radius: 18px;
+  }
+  /* direct child only — the star inside .rating keeps its own size */
+  .container > img{
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+  }
+  .name{
+    font-size: 20px;
+  }
+  .prof{
+    font-size: 15px;
+  }
+  .rating{
+    font-size: 17px;
+  }
+}
+
+/* Source photos are portrait (e.g. 687x1031) while these boxes are square,
+   circular or landscape — without object-fit the images are stretched. */
+.container > img{
+  object-fit: cover;
+}
